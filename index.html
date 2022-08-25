@@ -1,40 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
 
-		<title>reveal.js</title>
+        <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+        <link rel="stylesheet" href="dist/reset.css" />
+        <link rel="stylesheet" href="dist/reveal.css" />
+        <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section
+                    data-background-image="/reveal.js/assets/mw_lmc_welcome.jpg"
+                    id="welcome"
+                >
+                    <!-- First Vertical Slide -->
+                    <h5>
+                        Midiendo la distribución de Materia Oscura en la Vía
+                        Láctea con el Observatorio Vera Rubin
+                    </h5>
+                    <h5>
+                        Est: Stephanie Carolina Cely
+                        <br />
+                        Nicolas Garavito, Veronica Arias,
+                    </h5>
+                </section>
+                <section data-auto-animate>
+                    <!-- Second vertical slide -->
+                    <section>Estructura de la Via Láctea</section>
+                    <section>Stellar halo</section>
+                    <section>Dark Matter Halo</section>
+                    <section>Large Magellanic Cloud</section>
+                    <section>Dark matter wake</section>
+                    <section>Possible dark matter wake observations</section>
+                </section>
+                <section>
+                    <!-- Third vertical slide -->
+                    <section>Motivation</section>
+                    <section>Quantify wake in N-body simulations</section>
+                </section>
+                <section>
+                    <!-- Fourth vertical slide -->
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+                    <section>Simulation details</section>
+                    <section>Number of particles</section>
+                </section>
+                <section>
+                    <!-- Fifth vertical slide -->
+                    <section>Results</section>
+                    <section>YZ pos hist plots</section>
+                    <section>L vs R plots</section>
+                    <section>How did select the data</section>
+                </section>
+                <section>Conclusions</section>
+                <section>Future work</section>
+                <section><a href="#/welcome">Thank you!</a></section>
+            </div>
+        </div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+            });
+        </script>
+    </body>
 </html>
