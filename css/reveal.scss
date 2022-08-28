@@ -1437,7 +1437,6 @@ $controlsArrowAngleActive: 36deg;
         // other browsers since it degrades performance
         -moz-transform-style: preserve-3d;
     }
-
     .slides section {
         height: 100%;
         top: 0 !important;
@@ -1446,6 +1445,9 @@ $controlsArrowAngleActive: 36deg;
         visibility: visible !important;
         cursor: pointer;
         box-sizing: border-box;
+        font-size: 0.8em;
+        font-family: "Ancizar Sans Regular";
+        color: #1b91ff;
     }
     .slides section:hover,
     .slides section.present {
@@ -1514,7 +1516,9 @@ $controlsArrowAngleActive: 36deg;
 .reveal.rtl .slides h5,
 .reveal.rtl .slides h6 {
     direction: rtl;
-    font-family: sans-serif;
+    // font-family: "Ancizar Sans Regular";
+    font-size: small;
+    background-color: #17ff2e;
 }
 
 .reveal.rtl pre,
