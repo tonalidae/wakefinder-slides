@@ -140,28 +140,39 @@
                     <section id="milky-way" class="img-container">
                         <h5>Qué compone la Vía Láctea?</h5>
                         <!-- Recordar que la imagen no esta a escala, el disco se ve muy grande comparado con el halo, agregar diaositiva de profundidad -->
-                        <img
+                        <div class="r-stack">
+                            <img
+                            class="fragment"
+                            width="700"
                             src="media/artistic/mw_structure_lmc.png"
                             alt="Estructura"
-                            class="r-stretch"
-                        />
+                            />
+                            <img
+                            class="fragment"
+                            width="800"
+                            src="media/artistic/dm_halo_extension.png"
+                            alt="Halo-extension"
+                            />
+                            
+                        </div>
+                        
                     </section>
 
                     <!-- Diapostiva 2.2 -->
                     <section id="dm-dist">
-                        <h6>
+                        <p class="r-fit-text">
                             Propiedades de la
                             materia oscura e indicios sobre modelos del universo.
                             <!-- Hablar sobre como la morfologia del halo cambia segun el modelo -->
-                        </h6>
-                        <img src="media/DM-pie_website-w700.png" width="500"/>
+                        </p>
+                        <img src="media/ref/DM-pie_website-w700.png" width="500"/>
                     </section>
                     
                     <!-- Diapostiva 2.3 -->
                     <section id="dyn-friction">
                         <h6 class="r-fit-text">Fricción dinámica</h6>
                         <img 
-                        src="/media/dyn_fr.gif"
+                        src="media/ref/dyn_fr.gif"
                         class="r-stretch"
                         />
                     </section>
@@ -177,25 +188,69 @@
                             <img src="media/artistic/LMC-sky.webp" class="r-stretch" width="200px"/>
                     
                     </section>
+                    <section>
+                        <!-- <h6>Comparacion de tamanos</h6> -->
+                        <img src="media/artistic/Milky-Way-Magellanic-Clouds.jpg" class="r-stretch" />
+                        <!-- photo credits -->
+                        <p class="r-fit-text"><small><a href="https://www.sci.news/astronomy/large-magellanic-cloud-milky-way-collision-06788.html">
+                                La Via Lactea y la Gran Nube de Magallanes. Créditos: Nina McCurdy / NickRisinger / NASA.
+                            </a></small> 
+                    </section>
                     <!-- Diapostiva 2.5 -->
                     <section id="reflex-motion">
-                        <h6>Movimiento reflejo del halo de materia oscura</h6>
+                        <h6 class="r-fit-text">Movimiento reflejo del halo de materia oscura</h6>
+                        <div class="r-stack">
                         <img
-                            src="media/dm_halo.gif"
-                            alt="mw_streams"
-                            class="r-stretch"
-
-                        />
+                            src="media/ref/dm_halo.gif"
+                            alt="dark-matter-halo-animation"
+                            class="fragment"
+                            width="500"
+                            />
+                        <img
+                            src="media/ref/3d_wake.png"
+                            alt="dark-matter-halo-extension"
+                            class="fragment"
+                            width="600"/>
+                        </div>
+                        
+                        <p>
+                            <small>
+                                <em>
+                                    <strong>
+                                        <a
+                                            href="https://jngaravitoc.github.io/Garavito-Camargo/viz/"
+                                        >
+                                            Ref: Garavito-Camargo visualizaciones.
+                                        </a>
+                                    </strong>
+                                </em>
+                            </small>
+                        </p>
+                        
                     </section>
                     <!-- Diapostiva 2.6 -->
                     <section>
                         <h6 class="r-fit-text">El halo estelar sigue al de materia oscura</h6>
 
                         <img
-                            src="media/wake-g-coords.jpg"
+                            src="media/ref/wake-g-coords.jpg"
                             alt="mw_streams"
                             class="r-stretch"
                         />
+                        <p>
+                            <small>
+                                <em>
+                                    <strong>
+                                        <a
+                                            href="https://arxiv.org/pdf/2104.09515.pdf"
+                                        >
+                                            Ref: Conroy, Naidu, Garavito-Camargo
+                                            et al. (2021)
+                                        </a>
+                                    </strong>
+                                </em>
+                            </small>
+                        </p>
                     </section>
                     <!-- Diapostiva 2.7 -->
 
@@ -206,7 +261,7 @@
                     <section>
                         <h4 class="r-fit-text">Observaciones tentativas del dark matter wake</h4>
                         <img
-                            src="media/possible-observations.png"
+                            src="media/ref/possible-observations.png"
                             class="r-stretch"
                         />
                         <p>
@@ -234,7 +289,7 @@
                         <h6>
                             Movimiento propio
                         </h6>
-                        <img src="media/proper_motion.gif
+                        <img src="media/ref/proper_motion.gif
                         "
                         height="600"/>
                         <!-- Movimiento propio es la medida de los cambios observados en las posiciones de las estrellasd, se necesita medidas muy precisas para llevar un registro y poderlo observar, la estrella de Barnard tiene el movimiento propio mas rapido, se mueve 0.34 grados en 120 anios, le toma 37 minutos a la Luna atravesar la misma distancia -->
@@ -246,7 +301,7 @@
                         <h6 class="r-fit-text">Como detectar velocidades en 3D?</h6>
                         <div style="display: flex; padding: 30px">
                             <img
-                                src="media/VRO-field.png"
+                                src="media/ref/VRO-field.png"
                                 alt="VRO-field"
                                 class="r-stretch"
                                 style="width: 50%; height: auto"
@@ -279,7 +334,7 @@
                     
                     <section>
                         <img
-                            src="media/VRO/survey.png"
+                            src="media/ref/survey.png"
                             alt="mw_streams"
                             class="r-stretch"
                         />
@@ -288,10 +343,18 @@
 
                     <section id="deep-survey">
                         <img
-                            src="media/VRO/spatial-map-il.png"
-                            alt="mw_streams"
+                            src="media/ref/spatial-map-il.png"
+                            alt="spatial-map_VRO"
                             class="r-stretch"
                         />
+                    </section>
+                    <section>
+                        <h1 class="r-fit-text"> El LSST recopilará datos de la interacción</h1>
+                        <img src="media/artistic/lsst_lmc_mw.png" class="r-stretch"/>
+                        <!-- Creditos -->
+                        <p ><small ><a href="https://noirlab.edu/public/es/images/noirlab2030c/">
+                                Telescopio Victor M.Blanco de 4 metros y Los Telescopios SMARTS en CTIO.<br>Cerro Tololo, Chile, 2020 <br> CTIO/NOIRLab/NSF/AURA/H. Stockebrand
+                            </a></small>
                     </section>
                     <!-- Diapostiva 2.12 -->
 
@@ -346,22 +409,30 @@
                     </h6>
                     <div style="display: flex; flex-direction: row; margin-left: auto;">
                         <img
-                        src="media/wake_vis/density_contrast.gif"
+                        src="media/ref/density_contrast.gif"
                         alt="mw_streams"
                         class="r-stretch"
                     />
                     <img
-                        src="media/wake_vis/wake_yz.gif
+                        src="media/ref/wake_yz.gif
                         "
                         alt="mw_streams"
                         class="r-stretch"
                     />
                     </div>
-                    
-                    <a href="https://jngaravitoc.github.io/Garavito-Camargo/viz/">
-                            <small>Animación Garavito-Camargo</small> 
-                        </a>
-
+                    <p?>
+                            <small>
+                                <em>
+                                    <strong>
+                                        <a
+                                            href="https://jngaravitoc.github.io/Garavito-Camargo/viz/"
+                                        >
+                                            Ref: Garavito-Camargo visualizaciones.
+                                        </a>
+                                    </strong>
+                                </em>
+                            </small>
+                    </p>
                 </section>
                 <section>
                     <!-- <h6 class="r-fit-text">Contraste de densidad proyección yz</h6> -->
@@ -377,8 +448,9 @@
                     
                 </section>
                 <section>
-                    <h6>Partículas con momento angular bajo crecen con la interaccion de LMC y corresponden espacialmente al wake.</h6>
-                    <img src="media/results/wakefinder/momentum_region.jpg" width="500px"/>
+                    <!-- Partículas con momento angular bajo crecen con la interaccion de LMC y corresponden espacialmente al wake. -->
+                    <p class="r-fit-text r-frame">La ubicación de las partículas con momento angular bajo corresponde a la de la estela de materia oscura.</p>
+                    <img src="media/results/momentum_region.jpg" width="600"/>
                 </section>
                 <section>
                     <h6>Conclusiones</h6><pre class="python">
