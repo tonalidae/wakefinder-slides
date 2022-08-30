@@ -87,7 +87,7 @@
                     <section
                     data-auto-animate
                     data-background-image="media/artistic/mw_lmc_welcome.jpg"
-                    id="welcome"
+                    id="about-us"
                     >
                         <div class="r-stack">
                             <div
@@ -137,7 +137,7 @@
                 
                 <section data-auto-animate>
                     <!-- Diapostiva 2.1 -->
-                    <section id="structure" class="img-container">
+                    <section id="milky-way" class="img-container">
                         <h5>Qué compone la Vía Láctea?</h5>
                         <!-- Recordar que la imagen no esta a escala, el disco se ve muy grande comparado con el halo, agregar diaositiva de profundidad -->
                         <img
@@ -148,17 +148,26 @@
                     </section>
 
                     <!-- Diapostiva 2.2 -->
-                    <section>
+                    <section id="dm-dist">
                         <h6>
-                            Datos observables revelarian morfologia -> propiedades de la
-                            materia oscura e indicios sobre modelos.
+                            Propiedades de la
+                            materia oscura e indicios sobre modelos del universo.
+                            <!-- Hablar sobre como la morfologia del halo cambia segun el modelo -->
                         </h6>
                         <img src="media/DM-pie_website-w700.png" width="500"/>
                     </section>
                     
                     <!-- Diapostiva 2.3 -->
+                    <section id="dyn-friction">
+                        <h6 class="r-fit-text">Fricción dinámica</h6>
+                        <img 
+                        src="/media/wake_vis/dyn_fr.gif"
+                        class="r-stretch"
+                        />
+                    </section>
+                    <!-- Diapostiva 2.4 -->
                     
-                    <section>
+                    <section id="LMC">
                         <h6>Gran Nube de Magallanes (LMC)</h6>
                             <img
                                 src="media/artistic/Dwarf_galaxies_around_the_Milky_Way_interactive.png"
@@ -168,10 +177,18 @@
                             <img src="media/artistic/LMC-sky.webp" class="r-stretch" width="200px"/>
                     
                     </section>
-
-                    <!-- Diapostiva 2.4 -->
+                    <!-- Diapostiva 2.5 -->
+                    <section id="reflex-motion">
+                        <h6>Movimiento reflejo del halo de materia oscura</h6>
+                        <img
+                            src="media/wake_vis/dm_halo.gif"
+                            alt="mw_streams"
+                            class="r-stretch"
+                        />
+                    </section>
+                    <!-- Diapostiva 2.6 -->
                     <section>
-                        <h6>El halo estelar sigue al de materia oscura</h6>
+                        <h6 class="r-fit-text">El halo estelar sigue al de materia oscura</h6>
 
                         <img
                             src="media/wake_vis/wake-g-coords.jpg"
@@ -179,11 +196,14 @@
                             class="r-stretch"
                         />
                     </section>
+                    <!-- Diapostiva 2.7 -->
 
-                    <!-- Diapostiva 2.5 -->
+                    
+                    <!-- Diapostiva 2.8 -->
+
 
                     <section>
-                        <h4>Observaciones tentativas del dark matter wake</h4>
+                        <h4 class="r-fit-text">Observaciones tentativas del dark matter wake</h4>
                         <img
                             src="media/papers/possible-observations.png"
                             class="r-stretch"
@@ -203,43 +223,59 @@
                             </small>
                         </p>
                     </section>
-
-                    <!-- Diapostiva 2.6 -->
+                    <!-- Diapostiva 2.9 -->
                     <section>
-                        <h6>Como detectar velocidades en 3D?</h6>
+                        <h3>
+                            Como medir velocidades en astronomia?
+                        </h3>
+                    </section>
+                    <section id="proper-motion">
+                        <h6>
+                            Movimiento propio
+                        </h6>
+                        <img src="media/VRO/proper_motion.gif
+                        "
+                        height="600"/>
+                        <!-- Movimiento propio es la medida de los cambios observados en las posiciones de las estrellasd, se necesita medidas muy precisas para llevar un registro y poderlo observar, la estrella de Barnard tiene el movimiento propio mas rapido, se mueve 0.34 grados en 120 anios, le toma 37 minutos a la Luna atravesar la misma distancia -->
+
+                    </section>
+                    <!-- Vera Rubin Observatory -->
+
+                    <section>
+                        <h6 class="r-fit-text">Como detectar velocidades en 3D?</h6>
                         <div style="display: flex; padding: 30px">
                             <img
-                                src="media/VRO-field.png"
+                                src="media/VRO/VRO-field.png"
                                 alt="VRO-field"
                                 class="r-stretch"
                                 style="width: 50%; height: auto"
                             />
                             <div style="padding-left: 1.2vh; font-size: 2rem">
                                 <ul>
-                                    <li>
+                                    <li class="fragment" data-fragment-index="1">
                                         Campo de visión de 9.6 grados cuadrados
                                     </li>
-                                    <li>Luna ocupa 0.2 grados</li>
-                                    <li>
+                                    <li class="fragment" data-fragment-index="2">Luna ocupa 0.2 grados</li>
+                                    <li class="fragment" data-fragment-index="3">
                                         4300 imágenes para cubrir el cielo del
                                         hemisferio sur.
                                     </li>
-                                    <li>
+                                    <li class="fragment" data-fragment-index="4">
                                         Tarda 5 noches (12 años otros
                                         observatorios).
                                     </li>
-                                    <li>
+                                    <li class="fragment" data-fragment-index="5">
                                         Mayor volumen de datos (1000 veces más informacion)
                                     </li>
-                                    <li>
+                                    <li class="fragment" data-fragment-index="6">
                                         100x más profundidad.
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </section>
+                    <!-- Diapostiva 2.10 -->
                     
-                    <!-- Diapostiva 2.7 -->
                     <section>
                         <img
                             src="media/VRO/survey.png"
@@ -247,35 +283,26 @@
                             class="r-stretch"
                         />
                     </section>
+                    <!-- Diapostiva 2.11 -->
 
-                    <!-- Diapostiva 2.8 -->
-                    <section>
+                    <section id="deep-survey">
                         <img
-                            src="media/VRO/spatial-map-il1.png"
+                            src="media/VRO/spatial-map-il.png"
                             alt="mw_streams"
                             class="r-stretch"
                         />
                     </section>
+                    <!-- Diapostiva 2.12 -->
 
-                    <!-- Diapostiva 2.9 -->
-                    <section>
-                        <img src="media/proper_motion.gif"/>
-                    </section>
                     
-                    <!-- Diapostiva 2.10 -->
-                    <section>
-                        <h6>Dark Matter Halo</h6>
-                        <img
-                            src="media/wake_vis/dm_halo.gif"
-                            alt="mw_streams"
-                            class="r-stretch"
-                        />
-                    </section>
+                    <!-- Ends Vera Rubin observatory -->
+                    
                 </section>
                 <!-- Ends Second Vertical Slide pack -->
 
                 <!-- Third vertical slide pack -->
                 <section>
+                    <!-- Diapostiva 3.1 -->
                     
                     <!-- <section>Quantify wake in N-body simulations</section>
                     </section> -->
@@ -283,50 +310,67 @@
                     <h1>Analisis de datos </h1>
                     <p class="r-stretch">
                         <ul>
-                            <li>Simulaciones de N-cuerpos. Código  <a href="https://wwwmpa.mpa-garching.mpg.de/gadget4/">GADGET-4</a></li>
-                            <li>1 millón de particulas.</li>
-                            <li> 2 set de datos:
+                            <li class="fragment" data-fragment-index="1">Simulaciones de N-cuerpos. Código  <a href="https://wwwmpa.mpa-garching.mpg.de/gadget4/">GADGET-4</a></li>
+                            <li class="fragment" data-fragment-index="2">1 millón de partículas.</li>
+                            <li class="fragment" data-fragment-index="3"> 2 set de datos:
                                 <ol>
-                                    <li>Estado inicial, halo sin perturbacion</li>
-                                    <li>Luego de interaccion con LMC</li>
+                                    <li class="fragment" data-fragment-index="4">Estado inicial, halo sin perturbacion</li>
+                                    <li class="fragment" data-fragment-index="5">Luego de interaccion con LMC</li>
                                 </ol>
                                 </li>
-                            <li> Datos: posiciones y velocidades en 3D con su id</li>
-                            <li>Histogramas: Posición, cálculo de momento angular usando la velocidad de las partículas y su id.</li>
-                            <li>Clasificación en regiones de  bajo y alto momento angular</li>
+                            <li class="fragment" data-fragment-index="6"> Datos: posiciones y velocidades en 3D con su id</li>
+                            <li class="fragment" data-fragment-index="7">Histogramas: Posición, cálculo de momento angular usando la velocidad de las partículas y su id.</li>
+                            <li class="fragment" data-fragment-index="8">Clasificación en regiones de  bajo y alto momento angular</li>
                         </ul>
                     </p>
                 </section>
                 <!--4th verrtical slide pack-->
                 <section>
                     <h6>Intuición fisica: Momento angular delimita espacialmente el wake?</h6>
+                    <div class="r-frame">
                     \[\begin{aligned}
                     \vec{L} = \vec{r} \times \vec{v} 
                     \end{aligned} 
                     \]
+                    </div>
                 </section>
-    
+                <!--Seccion de resultados del proyecto-->
                 <section>
                 <h6>Resultados</h6>
                 </section>
                 <section>
-                    <h6>
-                        <a href="https://jngaravitoc.github.io/Garavito-Camargo/viz/">
-                            Visualization resources by Garavito-Camargo
-                        </a>
+                    <h6 class="r-fit-text
+                    ">
+                        Perturbación inducida por la órbita de la Gran Nube de Magallanes
                     </h6>
-                </section>
-                <section>
-                    <h6>Contraste de densidad proyección yz</h6>
-                    <img src="media/results/histogram_comparison/density_contrast_yz.jpg" width="300px" />
-                    <img
+                    <div style="display: flex; flex-direction: row; margin-left: auto;">
+                        <img
                         src="media/wake_vis/density_contrast.gif"
                         alt="mw_streams"
                         class="r-stretch"
                     />
+                    <img
+                        src="media/wake_vis/wake_yz.gif
+                        "
+                        alt="mw_streams"
+                        class="r-stretch"
+                    />
+                    </div>
+                    
+                    <a href="https://jngaravitoc.github.io/Garavito-Camargo/viz/">
+                            <small>Animación Garavito-Camargo</small> 
+                        </a>
+
                 </section>
                 <section>
-                    <h6>Momento angular L en eje x en funcion de la distancia r</h6>
+                    <!-- <h6 class="r-fit-text">Contraste de densidad proyección yz</h6> -->
+                    <img src="media/results/lmc_div.png" width="750
+                    " />
+                    <!-- <img src="media/results/lmc_sus.png" width="500" /> -->
+                    
+                </section>
+                <section>
+                    <h6>Momento angular L en eje x en función de la distancia r</h6>
                     <img src="media/results/LvsR.png" width="300px"/>
                     <img src="media/results/LvsR-2.png" width="300px"/>
                     
@@ -336,20 +380,21 @@
                     <img src="media/results/wakefinder/momentum_region.jpg" width="500px"/>
                 </section>
                 <section>
-                    <h6>Conclusiones</h6>
-                    <ul>
-                        <li>
-                            La nube de Magallanes induce una estela de materia oscura en el halo de materia oscura de la Vía Láctea debido a la fricción dinámica.
-                        </li>
-                        <li>
-                        El observatorio Vera Rubin va a proporcionar un mapa sin precedentes del halo estelar de la Vía Láctea en 5D.(posiciones y movimientos propios) Estos datos seran ideales para detectar la estela de materia oscura
-                        </li>
-                        <li>
-                        Estrellas asociadas a la estela de materia oscura pueden ser detectadas por su cambio en momento angular.
-                        </li>
-                    </ul>
-                    
+                    <h6>Conclusiones</h6><pre class="python">
+<code data-line-numbers="2-3|5-9|11-12">    
+    La nube de Magallanes induce una estela de materia oscura 
+    en el halo de la Vía Láctea debido a la fricción dinámica.
 
+    El observatorio Vera Rubin va a proporcionar un mapa 
+    sin precedentes del halo estelar de la Vía Láctea en 5D.
+    (posiciones y movimientos propios) 
+    Estos datos seran ideales para detectar la estela de 
+    materia oscura
+
+    Estrellas asociadas a la estela de materia oscura pueden 
+    ser detectadas por su cambio en momento angular.
+</code>
+</pre>
                 </section>
                 <!-- <section>
 
@@ -357,18 +402,22 @@
                 </section> -->
                 <section>
                     <h6>Trabajo a futuro</h6>
-                    <ul>
-                        <li>
-                            Seguir refinando el método de selección.
-                        </li>
-                        <li>
-                            Implementar procesos de automatización de este algoritmo.
-                        </li>
-                        <li>
-                            Aplicar el método en simulaciones cosmológicas (FIRE).
-                        </li>
-                    </ul>
+                    <pre class="python">
+<code data-line-numbers="2|4|6">    
+    Seguir refinando el método de selección.
+
+    Implementar procesos de automatización de este algoritmo.
+
+    Aplicar el método en simulaciones cosmológicas (FIRE).
+
+</code>
+                    </pre>
+                    
                 </section>
+                <section>
+                    <h1>Gracias!</h1>
+                    </section>
+                    
 
 
                 <!-- Fourth vertical slide -->
@@ -400,6 +449,10 @@
             // - https://revealjs.com/initialization/
             // - https://revealjs.com/config/
             Reveal.initialize({
+                // width: "100%"
+                // height: "100%",
+                // highlight: {
+                //     highlightOnLoad: false},
                 slideNumber: true,
                 hash: true,
                 // Learn about plugins: https://revealjs.com/plugins/
