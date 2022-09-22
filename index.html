@@ -147,23 +147,15 @@
                         \text{Masa halo materia oscura } 1-1.5 \times 10^{12} M_{\odot} \\
                         100 \times M_{disco} \\
                         \]</div>
-                        <p>Evidencia dinámica: Curvas de rotación</p>
+                        <p><small>Evidencia dinámica: Curvas de rotación</small></p>
                     </section>
                     
                     <section data= autoanimate id="milky-way" class="img-container">
                         <!-- <h5 class="r-fit-text">Qué compone la Vía Láctea?</h5> -->
                         
                         <h6>Estructura</h6>
-                        <!-- Recordar que la imagen no esta a escala, el disco se ve muy grande comparado con el halo, agregar diaositiva de profundidad -->
-                        <div class="r-stack">
-                            <!-- <img
-                            class="fragment"
-                            width="700"
-                            src="media/artistic/mw_structure_lmc.png"
-                            alt="Estructura"
-                            /> -->
+                        <div >
                             <img
-                            class="fragment"
                             width="800"
                             src="media/artistic/dm_halo_extension.png"
                             alt="Halo-extension"
@@ -188,7 +180,15 @@
                     
                     <!-- Diapostiva 2.4 -->
                     
-                    <section id="LMC">
+                    <section id="LMC" data-auto-animate>
+                        <h6>Gran Nube de Magallanes (LMC)</h6>
+                            <img
+                                src="media/artistic/lsst_lmc_mw.png"
+                                alt="mw_lmc"
+                                class="r-stretch"
+                                />
+                    </section>
+                    <section id="LMC" data-auto-animate>
                         <h6>Gran Nube de Magallanes (LMC)</h6>
                             <img
                                 src="media/artistic/lsst_lmc_mw.png"
@@ -209,8 +209,8 @@
                                     \[1 \text{pc } = 206265 \text{ ua}\]
                                 </small>
                             </p>
-                    
                     </section>
+
                     <section>
                         <!-- <h6>Comparacion de tamanos</h6> -->
                         <img src="media/artistic/Milky-Way-Magellanic-Clouds.jpg" class="r-stretch" />
@@ -246,16 +246,19 @@
                         <h6 class="r-fit-text">Movimiento reflejo del halo de materia oscura</h6>
                         <div class="r-stack">
                         <img
+                            class="fragment fade-out"
+                            data-fragment-index="0"
                             src="media/ref/dm_halo.gif"
                             alt="dark-matter-halo-animation"
-                            class="fragment"
                             width="500"
                             />
                         <img
                             src="media/ref/3d_wake.png"
                             alt="dark-matter-halo-extension"
-                            class="fragment"
-                            width="600"/>
+                            class="fragment current-visible"
+                            width="600"
+                            data-fragment-index="0"
+                            />
                         </div>
                         
                         <p>
@@ -279,7 +282,7 @@
                     <section id="dyn-friction">
                         <h6 class="r-fit-text">Fricción dinámica</h6>
                         <img 
-                        src="media/ref/dyn_fr.gif"
+                        src="media/ref/dyn.gif"
                         class="r-stretch"
                         />
                     </section>
@@ -288,7 +291,7 @@
 
 
                     <section>
-                        <h4 class="r-fit-text">Observaciones tentativas del dark matter wake</h4>
+                        <h4 class="r-fit-text">Observaciones tentativas de la estela de materia oscura.</h4>
                         <img
                             src="media/ref/possible-observations.png"
                             class="r-stretch"
@@ -426,12 +429,12 @@
                 <section>
                     <h6>Momento angular L en eje x en función de la distancia r</h6>
                     <div class="r-stack">
-                        <img src="media/results/Lmag_pos.png
-                        " width="600px" class="fragment"/>
-                        <img src="media/results/Lx_pos.png
-                        " width="600px" class="fragment"/>
-                        <img src="media/results/LvsR_low.png" width="600px" class="fragment"/>
-                    <img src="media/results/LvsR-2.png" width="600px" class="fragment"></div>
+                        <img src="media/results/Lmag_pos.png" width="550px"/>
+                        <img src ="media/results/Lx_pos.png" width="550px" class="fragment" data-fragment-index="1"/>
+                        <img src="media/results/Lmag_pos_low_L_mw.png" width="550px" class="fragment"/>
+                        <img src="media/results/Lmag_pos_mw_lmc.png" width="550px" class="fragment">
+                        <img src="media/results/Lmag_pos_mw_lmc_select.png" width="550px" class="fragment">
+                    </div>
                 </section>
 
                 <section data-auto-animate>
@@ -449,7 +452,8 @@
     La nube de Magallanes induce una estela de materia oscura 
     en el halo de la Vía Láctea debido a la fricción dinámica.
 
-    El observatorio Vera Rubin va a proporcionar un mapa 
+    Datos de futuros telescopios, como el LSST 
+    del observatorio Vera Rubin va a proporcionar un mapa 
     sin precedentes del halo estelar de la Vía Láctea en 5D.
     (posiciones y movimientos propios) 
     Estos datos serán ideales para detectar la estela de 
@@ -467,18 +471,20 @@
                 <section>
                     <h6>Trabajo a futuro</h6>
                     <pre class="python">
-<code data-line-numbers="2|4|6">    
+<code data-line-numbers="2|4|6|8">    
     Seguir refinando el método de selección.
 
     Implementar procesos de automatización de este algoritmo.
 
     Aplicar el método en simulaciones cosmológicas (FIRE).
+    
+    Creación de catálogo sintético.
 
 </code>
                     </pre>
                     
                 </section>
-                <section>
+                <section data-visibility="hidden">
                     <img src="media/results/algorithm.png" class="r-stretch"/>
                 </section>
                 <section>
@@ -527,9 +533,12 @@
                                     <img 
                                         src="media/logos/lsst.png"
                                         height="70vh"  />
+
                                 </div>
-                            <iframe src="https://embed.lottiefiles.com/animation/103023"></iframe>
-                            <iframe src="https://embed.lottiefiles.com/animation/19935"></iframe>
+                                <img src="media/logos/cocoa.png"
+                                    height="200vh" />
+                            <!-- <iframe src="https://embed.lottiefiles.com/animation/103023"></iframe>
+                            <iframe src="https://embed.lottiefiles.com/animation/19935"></iframe> -->
                             </div>
                     
                 </section>
