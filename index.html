@@ -45,9 +45,8 @@
                             >
                                 <img src="media/logos/BANNER_INTERNSHIP.png" />
                                 <h6 class="r-stretch fragment" data-fragment-index="1" >
-                                    Midiendo la distribución de Materia Oscura<br />
-                                    en la Vía Láctea con el Observatorio <br />
-                                    Vera Rubin
+                                    Wakefinder: Construcción de un código que identifica 
+                                    estelas (wakes) de materia oscura en simulaciones
                                 </h6>
                                 <div
                                     style="
@@ -131,11 +130,11 @@
                             </div>
                         </div>
                     </section>
-                </section>
+                
                 <!-- Ends First Vertical Slide pack -->
                 <!-- Second vertical slide pack -->
                 
-                <section data-auto-animate>
+                +
                     <!-- Diapostiva 2.1 -->
                     <section data-auto-animate="">
                         <h1> Qué compone la Vía Láctea?</h1>
@@ -144,11 +143,11 @@
                         <h1> Qué compone la Vía Láctea?</h1>
                         <div class="r-stretch">
                             \[\text{Galaxia espiral, disco}
-                        \times 10^{10} M_S \\
-                        \text{Masa halo materia oscura} 1-1.5 \times 10^{12} M_S \\
-                        100 \times \text{masa del disco} \\
+                        \times 10^{10} M_{\odot} \\
+                        \text{Masa halo materia oscura } 1-1.5 \times 10^{12} M_{\odot} \\
+                        100 \times M_{disco} \\
                         \]</div>
-                        <p>Evidencia dinámica de su existencia por curvas de rotación</p>
+                        <p>Evidencia dinámica: Curvas de rotación</p>
                     </section>
                     
                     <section data= autoanimate id="milky-way" class="img-container">
@@ -157,12 +156,12 @@
                         <h6>Estructura</h6>
                         <!-- Recordar que la imagen no esta a escala, el disco se ve muy grande comparado con el halo, agregar diaositiva de profundidad -->
                         <div class="r-stack">
-                            <img
+                            <!-- <img
                             class="fragment"
                             width="700"
                             src="media/artistic/mw_structure_lmc.png"
                             alt="Estructura"
-                            />
+                            /> -->
                             <img
                             class="fragment"
                             width="800"
@@ -182,6 +181,7 @@
                             <!-- Hablar sobre como la morfologia del halo cambia segun el modelo -->
                         </p>
                         <img src="media/ref/DM-pie_website-w700.png" width="500"/>
+                        <!-- referenciar -->
                     </section>
                     
                     <!-- Diapostiva 2.3 -->
@@ -191,14 +191,18 @@
                     <section id="LMC">
                         <h6>Gran Nube de Magallanes (LMC)</h6>
                             <img
-                                src="media/artistic/Dwarf_galaxies_around_the_Milky_Way_interactive.png"
+                                src="media/artistic/lsst_lmc_mw.png"
                                 alt="mw_lmc"
                                 class="r-stretch"
                                 />
-                            <img src="media/artistic/LMC-sky.webp" class="r-stretch" width="200px"/>
+                            <!-- <img src="media/artistic/LMC-sky.webp" class="r-stretch" width="200px"/> -->
                             <p>
-                                Representa el 10%-20% de masa total de la Vía Láctea y se encuentra a 50 kpc de distancia.
+                                10%-20% de masa total de la Vía Láctea<br>
+                                A 50 kpc del centro galáctico.
                             </p>
+                            <p ><small ><a href="https://noirlab.edu/public/es/images/noirlab2030c/">
+                                Telescopio Victor M.Blanco de 4 metros y Los Telescopios SMARTS en CTIO.<br>Cerro Tololo, Chile, 2020 <br> CTIO/NOIRLab/NSF/AURA/H. Stockebrand
+                            </a></small>
                     
                     </section>
                     <section>
@@ -214,7 +218,7 @@
                         <h6 class="r-fit-text">El halo estelar traza el potencial del de materia oscura</h6>
 
                         <img
-                            src="media/ref/wake-g-coords.jpg"
+                            src="media/artistic/NGC474_CfhtCoelum_960.jpg"
                             alt="mw_streams"
                             class="r-stretch"
                         />
@@ -223,10 +227,9 @@
                                 <em>
                                     <strong>
                                         <a
-                                            href="https://arxiv.org/pdf/2104.09515.pdf"
+                                            href="https://science.nasa.gov/galaxy-ngc-474-shells-and-star-streams"
                                         >
-                                            Ref: Conroy, Naidu, Garavito-Camargo
-                                            et al. (2021)
+                                            Ref: CFHT, Coelum, MegaCam, J.-C. Cuillandre (CFHT) & G. A. Anselmi (Coelum)
                                         </a>
                                     </strong>
                                 </em>
@@ -316,105 +319,44 @@
                         <!-- Movimiento propio es la medida de los cambios observados en las posiciones de las estrellasd, se necesita medidas muy precisas para llevar un registro y poderlo observar, la estrella de Barnard tiene el movimiento propio mas rapido, se mueve 0.34 grados en 120 anios, le toma 37 minutos a la Luna atravesar la misma distancia -->
 
                     </section>
-                    <!-- Vera Rubin Observatory -->
-
-                    <section>
-                        <h6 class="r-fit-text">Como detectar obsevacionalmente velocidades en 3D?</h6>
-                        <div style="display: flex; padding: 30px">
-                            <img
-                                src="media/ref/VRO-field.png"
-                                alt="VRO-field"
-                                class="r-stretch"
-                                style="width: 50%; height: auto"
-                            />
-                            <div style="padding-left: 1.2vh; font-size: 2rem">
-                                <ul>
-                                    <li class="fragment" data-fragment-index="1">
-                                        Campo de visión de 9.6 grados cuadrados
-                                    </li>
-                                    <li class="fragment" data-fragment-index="2">Luna ocupa 0.2 grados</li>
-                                    <li class="fragment" data-fragment-index="3">
-                                        4300 imágenes para cubrir el cielo del
-                                        hemisferio sur.
-                                    </li>
-                                    <li class="fragment" data-fragment-index="4">
-                                        Tarda 5 noches (12 años otros
-                                        observatorios).
-                                    </li>
-                                    <li class="fragment" data-fragment-index="5">
-                                        Mayor volumen de datos (1000 veces más informacion)
-                                    </li>
-                                    <li class="fragment" data-fragment-index="6">
-                                        100x más profundidad.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Diapostiva 2.10 -->
                     
-                    <section>
-                        <img
-                            src="media/ref/survey.png"
-                            alt="mw_streams"
-                            class="r-stretch"
-                        />
-                    </section>
-                    <!-- Diapostiva 2.11 -->
-
-                    <section id="deep-survey">
-                        <img
-                            src="media/ref/spatial-map-il.png"
-                            alt="spatial-map_VRO"
-                            class="r-stretch"
-                        />
-                    </section>
-                    <section>
-                        <h1 class="r-fit-text"> El LSST recopilará datos de la interacción</h1>
-                        <img src="media/artistic/lsst_lmc_mw.png" class="r-stretch"/>
-                        <!-- Creditos -->
-                        <p ><small ><a href="https://noirlab.edu/public/es/images/noirlab2030c/">
-                                Telescopio Victor M.Blanco de 4 metros y Los Telescopios SMARTS en CTIO.<br>Cerro Tololo, Chile, 2020 <br> CTIO/NOIRLab/NSF/AURA/H. Stockebrand
-                            </a></small>
-                    </section>
-                    <!-- Diapostiva 2.12 -->
-
-                    
-                    <!-- Ends Vera Rubin observatory -->
-                    
-                </section>
+                
                 <!-- Ends Second Vertical Slide pack -->
 
                 <!-- Third vertical slide pack -->
-                <section>
-                    <!-- Diapostiva 3.1 -->
-                    
-                    <!-- <section>Quantify wake in N-body simulations</section>
-                    </section> -->
-                    
-                    <!--4th verrtical slide pack-->
-                    
-                    <!--Seccion de resultados del proyecto-->
                 <section>
                 <h6>Resultados</h6>
                 </section>
                 <section>
                     <h6 class="r-fit-text
                     ">
-                        Perturbación inducida por la órbita de la Gran Nube de Magallanes
+                        Simulación de la perturbación inducida por la Gran Nube de Magallanes
                     </h6>
                     <div style="display: flex; flex-direction: row; margin-left: auto;">
-                        <img
+                        <!-- <img
                         src="media/ref/density_contrast.gif"
                         alt="mw_streams"
                         class="r-stretch"
-                    />
+                    /> -->
                     <img
                         src="media/ref/wake_yz.gif
                         "
                         alt="mw_streams"
                         class="r-stretch"
                     />
+                    <div>
+                        <ul>
+                            <li >Simulaciones de N-cuerpos. Código  <a href="https://wwwmpa.mpa-garching.mpg.de/gadget4/">GADGET-4</a></li>
+                            <li >1 millón de partículas.</li>
+                            <li > 2 set de datos:
+                                <ol>
+                                    <li >Estado inicial, halo sin perturbacion</li>
+                                    <li >Luego de interacción con LMC</li>
+                                </ol>
+                                </li>
+                            <li > Datos: posiciones y velocidades en 3D con su id</li>
+                        </ul>
+                    </div>
                     </div>
                     <p?>
                             <small>
@@ -430,7 +372,7 @@
                             </small>
                     </p>
                 </section>
-                <section>
+                <!-- <section>
                     <h6>Intuición fisica: Momento angular delimita espacialmente el wake?</h6>
                     <div class="r-frame" >
                     \[\begin{aligned}
@@ -438,49 +380,54 @@
                     \end{aligned} 
                     \]
                     </div>
-                </section>
+                </section> -->
                 <section>
-                    <h1>Analisis de datos </h1>
-                    <p class="r-stretch">
+                    <h1>Análisis de datos </h1>
+                    <p >
                         <ul>
-                            <li class="fragment" data-fragment-index="1">Simulaciones de N-cuerpos. Código  <a href="https://wwwmpa.mpa-garching.mpg.de/gadget4/">GADGET-4</a></li>
-                            <li class="fragment" data-fragment-index="2">1 millón de partículas.</li>
-                            <li class="fragment" data-fragment-index="3"> 2 set de datos:
-                                <ol>
-                                    <li class="fragment" data-fragment-index="4">Estado inicial, halo sin perturbacion</li>
-                                    <li class="fragment" data-fragment-index="5">Luego de interaccion con LMC</li>
-                                </ol>
-                                </li>
-                            <li class="fragment" data-fragment-index="6"> Datos: posiciones y velocidades en 3D con su id</li>
-                            <li class="fragment" data-fragment-index="7">Histogramas: Posición, cálculo de momento angular usando la velocidad de las partículas y su id.</li>
-                            <li class="fragment" data-fragment-index="8">Clasificación en regiones de  bajo y alto momento angular</li>
+                            <li >Histogramas: Posición, cálculo de momento angular usando la velocidad de las partículas.</li>
+                            <li >Identificación de cambios de momento angular.</li>
+                            <div class="r-frame" >
+                    \[\begin{aligned}
+                    \vec{L} = \vec{r} \times \vec{v} 
+                    \end{aligned} 
+                    \]
+                    </div>
                         </ul>
                     </p>
                 </section>
-                <section>
-                    <img src="media/results/algorithm.png" class="r-stretch"/>
-                </section>
+                
+<!-- Graficas propias empiezan aqui -->
+<!-- Histogramas de posicion -->
+
                 <section>
                     <!-- <h6 class="r-fit-text">Contraste de densidad proyección yz</h6> -->
-                    <img src="media/results/lmc_div.png" width="750
-                    " />
+                    <div class="r-stack">
+                        <img src="media/results/lmc_div.png"
+                        width="750" 
+                        class="fragment fade-out"
+                        data-fragment-index="0"/>
+                    <img src="media/results/contorno_div_yz_lmc.png"
+                        width="650"
+                        class="fragment current-visible"
+                        data-fragment-index="0" />
+                    </div>
+                    
                     <!-- <img src="media/results/lmc_sus.png" width="500" /> -->
                     
                 </section>
+<!-- Momento ang pos plots -->
                 <section>
                     <h6>Momento angular L en eje x en función de la distancia r</h6>
-                    <div class="r-stack"><img src="media/results/LvsR.png" width="650px" class="fragment"/>
-                        <img src="media/results/LvsR_low.png" width="650px" class="fragment"/>
-                    <img src="media/results/LvsR-2.png" width="650px" class="fragment"></div>
-                </section>
-                <section>
-                    <h6>Parámetros de selección</h6>
                     <div class="r-stack">
-                        \[L_1 = 220*(pos-50) + 10000\\
-                        L_2 = 220*(pos-50) + 25000
-                        
-                        \]</div>
+                        <img src="media/results/Lmag_pos.png
+                        " width="600px" class="fragment"/>
+                        <img src="media/results/Lx_pos.png
+                        " width="600px" class="fragment"/>
+                        <img src="media/results/LvsR_low.png" width="600px" class="fragment"/>
+                    <img src="media/results/LvsR-2.png" width="600px" class="fragment"></div>
                 </section>
+
                 <section data-auto-animate>
                     <!-- Partículas con momento angular bajo crecen con la interaccion de LMC y corresponden espacialmente al wake. -->
                     <p class="r-fit-text r-frame">La ubicación de las partículas con momento angular bajo <br>corresponde a la de la estela de materia oscura.</p>
@@ -499,8 +446,8 @@
     El observatorio Vera Rubin va a proporcionar un mapa 
     sin precedentes del halo estelar de la Vía Láctea en 5D.
     (posiciones y movimientos propios) 
-    Estos datos seran ideales para detectar la estela de 
-    materia oscura
+    Estos datos serán ideales para detectar la estela de 
+    materia oscura.
 
     Estrellas asociadas a la estela de materia oscura pueden 
     ser detectadas por su cambio en momento angular.
@@ -524,6 +471,9 @@
 </code>
                     </pre>
                     
+                </section>
+                <section>
+                    <img src="media/results/algorithm.png" class="r-stretch"/>
                 </section>
                 <section>
                     <p clss="r-fit-text">
@@ -577,6 +527,80 @@
                             </div>
                     
                 </section>
+                
+                    <!-- Vera Rubin Observatory -->
+
+                    <section>
+                        <h6 class="r-fit-text">Como detectar obsevacionalmente velocidades en 3D?</h6>
+                        <div style="display: flex; padding: 30px">
+                            <img
+                                src="media/ref/VRO-field.png"
+                                alt="VRO-field"
+                                class="r-stretch"
+                                style="width: 50%; height: auto"
+                            />
+                            <div style="padding-left: 1.2vh; font-size: 2rem">
+                                <ul>
+                                    <li class="fragment" data-fragment-index="1">
+                                        Campo de visión de 9.6 grados cuadrados
+                                    </li>
+                                    <li class="fragment" data-fragment-index="2">Luna ocupa 0.2 grados</li>
+                                    <li class="fragment" data-fragment-index="3">
+                                        4300 imágenes para cubrir el cielo del
+                                        hemisferio sur.
+                                    </li>
+                                    <li class="fragment" data-fragment-index="4">
+                                        Tarda 5 noches (12 años otros
+                                        observatorios).
+                                    </li>
+                                    <li class="fragment" data-fragment-index="5">
+                                        Mayor volumen de datos (1000 veces más informacion)
+                                    </li>
+                                    <li class="fragment" data-fragment-index="6">
+                                        100x más profundidad.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Diapostiva 2.10 -->
+                    
+                    <section>
+                        <img
+                            src="media/ref/survey.png"
+                            alt="mw_streams"
+                            class="r-stretch"
+                        />
+                    </section>
+                    <!-- Diapostiva 2.11 -->
+                    <section id="deep-survey">
+                        <img
+                            src="media/ref/spatial-map-il.png"
+                            alt="spatial-map_VRO"
+                            class="r-stretch"
+                        />
+                    </section>
+                    <section>
+                        <h1 class="r-fit-text"> El LSST recopilará datos de la interacción</h1>
+                        <img src="media/artistic/lsst_lmc_mw.png" class="r-stretch"/>
+                        <!-- Creditos -->
+                        <p ><small ><a href="https://noirlab.edu/public/es/images/noirlab2030c/">
+                                Telescopio Victor M.Blanco de 4 metros y Los Telescopios SMARTS en CTIO.<br>Cerro Tololo, Chile, 2020 <br> CTIO/NOIRLab/NSF/AURA/H. Stockebrand
+                            </a></small>
+                    </section>
+                    <!-- Diapostiva 2.12 -->
+                                    <!-- Parametros (Ecuaciones de las lineas para seleccionar) -->
+                <section>
+                    <h6>Parámetros de selección</h6>
+                    <div class="r-stack">
+                        \[L_1 = 220*(pos-50) + 10000\\
+                        L_2 = 220*(pos-50) + 25000
+                        
+                        \]</div>
+                </section>
+                    </section>
+                    <!-- Ends Vera Rubin observatory -->
+                    
                     
 
 
