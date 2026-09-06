@@ -9,3 +9,5 @@ log/*.log
 tmp/**
 node_modules/
 .sass-cache
+# Thesis LaTeX source (85 MB, versioned separately)
+WakeFinder__Code_construction_for_identify_dark_matter_wake_on_Milky_Way_Galaxy/

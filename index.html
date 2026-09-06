@@ -155,15 +155,34 @@
                             <!-- Talk about how the halo morphology changes depending on the model -->
                         </h6>
                         <img src="media/DM-pie_website-w700.png" width="500"/>
+                        <aside class="notes">
+                        Dark matter is about 85% of the mass in the universe. It emits no
+                        electromagnetic radiation, so we know it only through gravity.
+                        Evidence: missing mass in galaxy rotation curves (~5x the visible
+                        matter), gravitational lensing, and anisotropy patterns in the CMB.
+                        It is also needed for structure to form at all &mdash; baryonic matter
+                        alone was too hot to collapse under gravity in the early universe.
+                        Different DM models perturb halos differently, which is what makes
+                        this kind of analysis a way to tell models apart.
+                        </aside>
                     </section>
                     
                     <!-- Slide 2.3 -->
                     <section id="dyn-friction">
                         <h6 class="r-fit-text">Dynamical friction</h6>
                         <img 
-                        src="/media/wake_vis/dyn_fr.gif"
+                        src="media/wake_vis/dyn_fr.gif"
                         class="r-stretch"
                         />
+                        <aside class="notes">
+                        The mechanism is resonance. The LMC's orbital frequency aligns with the
+                        natural frequencies of halo particles, which get trapped in resonant
+                        orbits sharing similar velocities. That builds the density wake trailing
+                        the satellite. The wake then pulls back on the LMC &mdash; dynamical
+                        friction (Chandrasekhar 1943) &mdash; draining its kinetic energy so the
+                        orbit decays and circularises. The drag is stronger for more massive
+                        satellites, which is why a 1:10 mass ratio matters here.
+                        </aside>
                     </section>
                     <!-- Slide 2.4 -->
                     
@@ -175,6 +194,14 @@
                                 class="r-stretch"
                                 />
                             <img src="media/artistic/LMC-sky.webp" class="r-stretch" width="200px"/>
+                            <aside class="notes">
+                            Numbers worth saying out loud: the LMC is the most massive satellite of
+                            the Milky Way, roughly one tenth of the host mass. It is about 50 kpc
+                            away, just past pericentre, moving at about 327 km/s. Evidence points to
+                            a first infall. If it had completed several orbits, the wake would be
+                            washed out by destructive interference and we would not be able to see
+                            it &mdash; so its detectability is itself an argument for first infall.
+                            </aside>
                     
                     </section>
                     <!-- Slide 2.5 -->
@@ -222,6 +249,14 @@
                                 </em>
                             </small>
                         </p>
+                        <aside class="notes">
+                        Conroy et al. measured variations in stellar density that matched the
+                        predicted location of the dark matter wake, evidence that the MW halo is
+                        out of equilibrium. They used Gaia and WISE, measuring low-metallicity
+                        stars in both optical and infrared to get distances and proper motions.
+                        Stars and dark matter particles feel the same dynamical response, which
+                        is why a stellar overdensity traces the dark matter wake.
+                        </aside>
                     </section>
                     <!-- Slide 2.9 -->
                     <section>
@@ -277,18 +312,20 @@
                     <!-- Slide 2.10 -->
                     
                     <section>
+                        <h6>Ten years of LSST coverage</h6>
                         <img
                             src="media/VRO/survey.png"
-                            alt="mw_streams"
+                            alt="Number of LSST visits over ten years, all bands"
                             class="r-stretch"
                         />
                     </section>
                     <!-- Slide 2.11 -->
 
                     <section id="deep-survey">
+                        <h6>Predicted spatial mapping for the LSST</h6>
                         <img
-                            src="media/VRO/spatial-map-il.png"
-                            alt="mw_streams"
+                            src="media/VRO/spatial-map-en.png"
+                            alt="Predicted LSST spatial mapping of the Milky Way halo"
                             class="r-stretch"
                         />
                     </section>
@@ -313,6 +350,15 @@
                         <li class="fragment" data-fragment-index="2">DM particle mass resolution 4&times;10<sup>4</sup> M<sub>&#9737;</sub></li>
                         <li class="fragment" data-fragment-index="3">10<sup>8</sup> particles are needed to capture resonances</li>
                         <li class="fragment" data-fragment-index="4">We analyse 10<sup>6</sup> of them, beyond 50 kpc from the halo centre</li>
+                        <aside class="notes">
+                        The simulations are Garavito-Camargo et al. (2021), run with Gadget-3:
+                        eight high-resolution runs testing how the MW halo responds to different
+                        DM models. Ours is collisionless Cold Dark Matter. MW halo mass
+                        1.2e12 solar masses, initial LMC halo 1.8e11 &mdash; the 1:10 ratio that
+                        makes dynamical friction relevant. The 50 kpc floor matters: those
+                        particles are low density and far enough from the potential's centre to
+                        actually respond to the LMC, which makes asymmetries visible.
+                        </aside>
                     </ul>
                 </section>
                 <!-- Data analysis, part 2: the two runs -->
@@ -347,6 +393,30 @@
                     \]
                     </div>
                 </section>
+                <!-- Rotation into the LMC orbital plane -->
+                <section>
+                    <h6>First, rotate into the LMC orbital plane</h6>
+                    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 2vw;">
+                        <img
+                            src="media/results/orbit/orbit_xy.png"
+                            alt="LMC orbit in the rotated XY plane"
+                            style="background: #fff; padding: 6px; border-radius: 6px; max-height: 46vh;" />
+                        <img
+                            src="media/results/orbit/orbit_3d.png"
+                            alt="LMC orbit in 3D, contained in the rotated plane"
+                            style="background: #fff; padding: 6px; border-radius: 6px; max-height: 46vh;" />
+                    </div>
+                    <p><small>The orbit is contained in
+                        0.987x + 0.112y &minus; 0.114z = 0, so it lies in XY.
+                        Every projection that follows is in these rotated coordinates.</small></p>
+                    <aside class="notes">
+                    In the raw simulation the LMC's passages run mostly along the x axis.
+                    Rotating the whole system into the orbital plane puts the orbit in XY,
+                    so the largest changes show up in one projection instead of being smeared
+                    across three. Left panel: the orbit has positive orientation. Right: it
+                    is fully contained in the plane.
+                    </aside>
+                </section>
                 <!-- Selection criteria: the WakeFinder algorithm -->
                 <section>
                     <h6>How the wake is selected</h6>
@@ -371,6 +441,13 @@
                                 <small>The 125 kpc limit follows a spike in the distance
                                 distribution, followed by a drop in |L|.</small>
                             </p>
+                            <aside class="notes">
+                            One honest caveat to raise here. Because the particles that gain the most
+                            angular momentum are the ones near the LMC's orbit, the selected set is
+                            asymmetric by construction. That means we cannot apply statistics based on
+                            distance from the halo centre &mdash; the asymmetry is what we are looking
+                            for, not a bias to correct away.
+                            </aside>
                         </div>
                         <div style="flex: 1; display: flex; flex-direction: column; gap: 1vh;">
                             <img
@@ -415,9 +492,8 @@
 
                 </section>
                 <section>
-                    <!-- <h6 class="r-fit-text">Density contrast, yz projection</h6> -->
-                    <img src="media/results/lmc_div.png" width="750
-                    " />
+                    <h6 class="r-fit-text">Density contrast, yz projection</h6>
+                    <img src="media/results/lmc_div.png" width="750" />
                     <!-- <img src="media/results/lmc_sus.png" width="500" /> -->
                     
                 </section>
@@ -430,6 +506,25 @@
                 <section>
                     <h6>Low angular momentum particles grow with the LMC interaction and correspond spatially to the wake.</h6>
                     <img src="media/results/wakefinder/momentum_region.jpg" width="500px"/>
+                </section>
+                <!-- Velocity field before and after the interaction -->
+                <section>
+                    <h6 class="r-fit-text">The velocity field aligns with the LMC orbit</h6>
+                    <img
+                        src="media/results/velocity_field/hist_orb_pert_xy.png"
+                        alt="Particle density and velocity direction, unperturbed vs perturbed halo"
+                        class="r-stretch"
+                        style="background: #fff; padding: 8px; border-radius: 6px;" />
+                    <p><small>Left: isotropic directions. Right: arrows comb into alignment
+                        along the orbit (red), and the density concentrates on it.</small></p>
+                    <aside class="notes">
+                    Quantitatively: the divergence of the velocity field turns positive, and
+                    both the standard deviation of the angles and the circular variance drop
+                    sharply compared with the unperturbed halo. The spatial scale also
+                    shrinks, which is why the perturbed panel looks denser. A natural next
+                    step is gradient and curl as geometric filters &mdash; wake particles
+                    should show a lower gradient because they are more aligned.
+                    </aside>
                 </section>
                 <!-- Energy vs angular momentum phase diagram -->
                 <section>
@@ -473,6 +568,26 @@
                             applied to real observations
                         </li>
                     </ul>
+                </section>
+                <!-- The selected wake, in 3D, against the LMC orbit -->
+                <section>
+                    <h6 class="r-fit-text">The selected wake follows the LMC orbit</h6>
+                    <img
+                        src="media/results/wakefinder/wake_selected_particles_3d.png"
+                        alt="Selected dark matter wake candidates in 3D, coloured by angular momentum, with the LMC orbit"
+                        class="r-stretch"
+                        style="background: #fff; padding: 8px; border-radius: 6px;" />
+                    <p><small>Wake candidates in 3D, coloured by specific angular momentum.
+                        The red curve is the LMC orbit.</small></p>
+                    <aside class="notes">
+                    This is the whole argument in one picture: the selected particles trail
+                    the LMC orbit, and their angular momentum rises along the trail.
+                    On robustness &mdash; lower first-cut thresholds and higher second-cut
+                    intercepts sharpen the peak; selecting too few particles loses the
+                    structure entirely and the teardrop turns circular; and running the same
+                    selection on random samples gives saturated plots with no pattern at all.
+                    That null test is the reason to believe the structure is real.
+                    </aside>
                 </section>
                 <section>
                     <h6>Conclusions</h6><pre class="python">
