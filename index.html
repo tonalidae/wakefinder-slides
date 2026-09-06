@@ -15,6 +15,176 @@
 
         <!-- Theme used for syntax highlighted code -->
         <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+
+        <style>
+            /* ==========================================================
+               Title slide
+               ========================================================== */
+
+            /* Scrim over the background photo so the type stays legible.
+               Reveal copies a slide's classes onto its background element,
+               which is why `.title-slide` can be targeted here. */
+            .reveal
+                .backgrounds
+                .slide-background.title-slide
+                .slide-background-content::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(
+                        70% 55% at 50% 44%,
+                        rgba(3, 7, 18, 0) 0%,
+                        rgba(3, 7, 18, 0.5) 72%,
+                        rgba(3, 7, 18, 0.7) 100%
+                    ),
+                    linear-gradient(
+                        180deg,
+                        rgba(3, 7, 18, 0.72) 0%,
+                        rgba(3, 7, 18, 0.3) 24%,
+                        rgba(3, 7, 18, 0.55) 55%,
+                        rgba(3, 7, 18, 0.92) 84%,
+                        rgba(3, 7, 18, 0.98) 100%
+                    );
+            }
+
+            /* Reveal's own `.present { display: block }` is more specific than
+               a plain class selector, so the flex rule has to match it. */
+            .reveal .slides > section > section.title-slide.present,
+            .reveal .slides > section.title-slide.present {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+
+            .title-slide__inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-width: 780px;
+                text-align: center;
+            }
+
+            /* Alpha-cut copy of BANNER_INTERNSHIP.png: the original is white
+               line art on solid black, which would sit on the photo as a black
+               slab, so the black was keyed out to transparency. */
+            .title-slide__banner {
+                width: 420px;
+                max-width: 52%;
+                height: auto;
+                margin: 0 0 44px;
+                opacity: 0.82;
+                border: 0;
+                background: none;
+                box-shadow: none;
+            }
+
+            .title-slide__wordmark {
+                margin: 0;
+                font-size: 84px;
+                font-weight: 400;
+                line-height: 1;
+                letter-spacing: 0.14em;
+                /* letter-spacing pads the right edge; pull it back to centre */
+                text-indent: 0.14em;
+                text-transform: uppercase;
+                color: #fff;
+                text-shadow: 0 0 40px rgba(120, 170, 255, 0.35);
+            }
+
+            .title-slide__tagline {
+                margin: 26px auto 0;
+                max-width: 620px;
+                font-size: 25px;
+                line-height: 1.45;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 0.82);
+            }
+
+            /* Hairline that fades out at both ends */
+            .title-slide__rule {
+                width: 220px;
+                height: 1px;
+                margin: 34px auto;
+                border: 0;
+                background: linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, 0.45),
+                    rgba(255, 255, 255, 0)
+                );
+            }
+
+            .title-slide__byline {
+                margin: 0;
+            }
+
+            .title-slide__author {
+                display: block;
+                margin: 0;
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: 0.02em;
+                color: #fff;
+            }
+
+            .title-slide__affiliation {
+                display: block;
+                margin: 8px 0 0;
+                font-size: 17px;
+                font-weight: 400;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            .title-slide__logos {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 42px;
+                margin-top: 54px;
+                padding-top: 30px;
+                border-top: 1px solid rgba(255, 255, 255, 0.14);
+                width: 100%;
+            }
+
+            .title-slide__logos img {
+                display: block;
+                width: auto;
+                margin: 0;
+                border: 0;
+                background: none;
+                box-shadow: none;
+                opacity: 0.85;
+            }
+
+            /* Logos that are dark artwork get flattened to white so the
+               whole row reads as one family. */
+            .title-slide__logos img.is-dark {
+                filter: brightness(0) invert(1);
+            }
+
+            /* Optical sizing: each mark is trimmed differently, so heights
+               are tuned per logo rather than shared. */
+            .title-slide__logos .logo-reca {
+                height: 62px;
+            }
+            .title-slide__logos .logo-unal {
+                height: 44px;
+            }
+            .title-slide__logos .logo-cca {
+                height: 32px;
+            }
+            .title-slide__logos .logo-rubin {
+                height: 46px;
+            }
+            .title-slide__logos .logo-lsst {
+                height: 34px;
+            }
+        </style>
     </head>
     <body>
         <div class="reveal">
@@ -32,102 +202,65 @@
                 <!-- Title slide 1 -->
                 <section>
                     <section
-                    data-auto-animate
-                    data-background-image="media/artistic/mw_lmc_welcome.jpg"
-                    id="welcome"
+                        class="title-slide"
+                        data-auto-animate
+                        data-background-image="media/artistic/mw_lmc_welcome.jpg"
+                        id="welcome"
                     >
-                        
-                        <div class="r-stack">
-                            <div
-                                style="
-                                    background-color: rgba(211, 211, 211, 0.24);
-                                "
-                            >
-                                <img src="media/logos/BANNER_INTERNSHIP.png" />
-                                <h6 class="r-stretch fragment" data-fragment-index="1" >
-                                    Measuring the Dark Matter distribution<br />
-                                    in the Milky Way with the <br />
-                                    Vera Rubin Observatory
-                                </h6>
-                                <div
-                                    style="
-                                        flex: auto;
-                                        flex-direction: column;
-                                        "
-                                >
-                                <!-- Logos -->
-                                    <img
-                                    src="media/logos/Logo-RECA-Black-sin-fondo.png"
-                                    class="fragment" data-fragment-index="2"
-                                    height="70vh" />
-                                    <img
-                                        src="media/logos/UNAL_Logosimbolo.svg"
-                                        height="70vh"
-                                        class="fragment"
-                                        data-fragment-index="2"
-                                    />
-                                    <img
-                                        src="media/logos/CCA_logo_white.png"
-                                        class="fragment" data-fragment-index="2"
-                                        height="60vh"/>
-                                    <img
-                                        src="media/logos/rubin-logo.svg"
-                                        class="fragment" data-fragment-index="2"
-                                        height="90vh"  />
-                                    <img 
-                                        src="media/logos/lsst.png"
-                                        class="fragment" data-fragment-index="2"
-                                        height="70vh"  />
-                                </div>
-                                
+                        <div class="title-slide__inner">
+                            <img
+                                class="title-slide__banner"
+                                src="media/logos/BANNER_INTERNSHIP_alpha.png"
+                                alt="RECA Internship"
+                            />
+
+                            <div class="fragment fade-up" data-fragment-index="1">
+                                <h1 class="title-slide__wordmark">WakeFinder</h1>
+                                <p class="title-slide__tagline">
+                                    Code for identifying the dark matter wake in
+                                    N-body simulations of interacting galaxies
+                                </p>
+                                <hr class="title-slide__rule" />
+                                <p class="title-slide__byline">
+                                    <span class="title-slide__author"
+                                        >Stephanie Carolina Cely</span
+                                    >
+                                    <span class="title-slide__affiliation"
+                                        >National University of Colombia</span
+                                    >
+                                </p>
                             </div>
-                        </div>
-                    </section>
-                    <!-- Second part of slide 1, animation -->
-                    <section
-                    data-auto-animate
-                    data-background-image="media/artistic/mw_lmc_welcome.jpg"
-                    id="about-us"
-                    >
-                        <div class="r-stack">
+
+                            <!-- Logos -->
                             <div
-                                style="
-                                    background-color: rgba(211, 211, 211, 0.24);
-                                "
+                                class="title-slide__logos fragment"
+                                data-fragment-index="2"
                             >
-                                <img src="media/logos/BANNER_INTERNSHIP.png" />
-                            <div class="r-stack">
-                                <h6 >
-                                Stephanie Carolina Cely
-                                <br />
-                                Nicolás Garavito, Veronica Arias.
-                                </h6>
-                            </div>
-                                <div
-                                    style="
-                                        flex: auto;
-                                        flex-direction: column;
-                                        "
-                                >
-                                <!-- Logos -->
-                                    <img
-                                    src="media/logos/Logo-RECA-Black-sin-fondo.png"
-                                    height="70vh" />
-                                    <img
-                                        src="media/logos/UNAL_Logosimbolo.svg"
-                                        height="70vh"
-                                    />
-                                    <img
-                                        src="media/logos/CCA_logo_white.png"
-                                        height="60vh"/>
-                                    <img
-                                        src="media/logos/rubin-logo.svg"
-                                        height="90vh"  />
-                                    <img 
-                                        src="media/logos/lsst.png"
-                                        height="70vh"  />
-                                </div>
-                                
+                                <img
+                                    class="logo-reca"
+                                    src="media/logos/Logo-RECA-White-sin-fondo.png"
+                                    alt="RECA"
+                                />
+                                <img
+                                    class="logo-unal is-dark"
+                                    src="media/logos/UNAL_Logosimbolo.svg"
+                                    alt="Universidad Nacional de Colombia"
+                                />
+                                <img
+                                    class="logo-cca"
+                                    src="media/logos/CCA_logo_white.png"
+                                    alt="Center for Computational Astrophysics"
+                                />
+                                <img
+                                    class="logo-rubin"
+                                    src="media/logos/rubin-logo.svg"
+                                    alt="Vera C. Rubin Observatory"
+                                />
+                                <img
+                                    class="logo-lsst"
+                                    src="media/logos/lsst.png"
+                                    alt="LSST Corporation"
+                                />
                             </div>
                         </div>
                     </section>
@@ -158,10 +291,10 @@
                             <img src="media/DM-pie_website-w700.png" style="max-height: 44vh;"/>
                             <ul style="font-size: 1.5rem; text-align: left;">
                                 <li class="fragment" data-fragment-index="1">85% of the mass in the universe</li>
-                                <li class="fragment" data-fragment-index="2">Emits no electromagnetic radiation &mdash; known only through gravity</li>
+                                <li class="fragment" data-fragment-index="2">Emits no electromagnetic radiation ; known only through gravity</li>
                                 <li class="fragment" data-fragment-index="3">About 5&times; more abundant than visible matter</li>
                                 <li class="fragment" data-fragment-index="4">Evidence: rotation curves, gravitational lensing, CMB anisotropy</li>
-                                <li class="fragment" data-fragment-index="5">Without it, structure could not have formed at all</li>
+                                <li class="fragment" data-fragment-index="5">Without it structure could not have formed at all</li>
                             </ul>
                         </div>
                         <aside class="notes">
@@ -205,7 +338,7 @@
                             <img src="media/artistic/LMC-sky.webp" class="r-stretch" width="200px"/>
                             <p style="font-size: 1.4rem; margin-top: 0.5vh;">
                                 <span class="fragment" data-fragment-index="1">~1/10 of the Milky Way's mass</span> &middot;
-                                <span class="fragment" data-fragment-index="2">~50 kpc away, just past pericentre</span> &middot;
+                                <span class="fragment" data-fragment-index="2">~50 kpc away past pericentre</span> &middot;
                                 <span class="fragment" data-fragment-index="3">moving at 327 km/s</span> &middot;
                                 <span class="fragment" data-fragment-index="4"><strong>on first infall</strong></span>
                             </p>
@@ -253,7 +386,7 @@
                         <p style="font-size: 1.4rem;">
                             <span class="fragment" data-fragment-index="1">Gaia + WISE, low-metallicity stars in optical and infrared.</span>
                             <span class="fragment" data-fragment-index="2">Several orbits would wash the wake out by destructive
-                            interference &mdash; seeing it argues for first infall.</span>
+                            interference.</span>
                         </p>
                         <p>
                             <small>
@@ -368,8 +501,8 @@
                     <ul>
                         <li class="fragment" data-fragment-index="1">N-body simulations run with <a href="https://wwwmpa.mpa-garching.mpg.de/gadget/">Gadget-3</a> (Garavito-Camargo et al. 2021)</li>
                         <li class="fragment" data-fragment-index="2">DM particle mass resolution 4&times;10<sup>4</sup> M<sub>&#9737;</sub></li>
-                        <li class="fragment" data-fragment-index="3">10<sup>8</sup> particles are needed to capture resonances</li>
-                        <li class="fragment" data-fragment-index="4">We analyse 10<sup>6</sup> of them, beyond 50 kpc from the halo centre</li>
+                        
+                        <li class="fragment" data-fragment-index="3">We analyse 10<sup>6</sup> particles beyond 50 kpc from the halo centre</li>
                         <aside class="notes">
                         The simulations are Garavito-Camargo et al. (2021), run with Gadget-3:
                         eight high-resolution runs testing how the MW halo responds to different
@@ -383,7 +516,7 @@
                 </section>
                 <!-- Data analysis, part 2: the two runs -->
                 <section>
-                    <h6>Two matched datasets</h6>
+                    <h6>Snapshots</h6>
                     <ul>
                         <li class="fragment" data-fragment-index="1">The same snapshot (t = 1.1 Gyr) from two independent runs:
                             <ol>
@@ -391,7 +524,7 @@
                                 <li class="fragment" data-fragment-index="3">Halo perturbed by the LMC</li>
                             </ol>
                         </li>
-                        <li class="fragment" data-fragment-index="4">Not a before/after in time &mdash; the two runs are matched particle by particle through a shared id</li>
+                        <li class="fragment" data-fragment-index="4">Runs are matched particle by particle through a shared id</li>
                     </ul>
                 </section>
                 <!-- Data analysis, part 3: derived quantities -->
@@ -450,6 +583,9 @@
                                 <strong>Cut 2</strong> &mdash; take those same ids in the
                                 <em>perturbed</em> halo and keep the band
                                 L<sub>1</sub> &lt; L &lt; L<sub>2</sub>, with r &lt; 125 kpc
+                            </p>
+                            <p class="fragment" data-fragment-index="2">
+                                The values of L<sub>1</sub> and L<sub>2</sub> are defined as:
                             </p>
                             <div class="fragment" data-fragment-index="2">
                             \[\begin{aligned}
@@ -575,7 +711,7 @@
                             they corotate with the LMC, whose orbit lies in the XY plane
                         </li>
                         <li class="fragment" data-fragment-index="2">
-                            Energy rises by about 10 000 &mdash; the halo expands,
+                            Energy rises by about 10 000 
                             as seen in galaxy mergers
                         </li>
                         <li class="fragment" data-fragment-index="3">
@@ -583,22 +719,20 @@
                             L = 10 000 selection threshold
                         </li>
                         <li class="fragment" data-fragment-index="4">
-                            <strong>No pre-interaction data needed</strong> &mdash; unlike selection
-                            by angular momentum increments alone, so the method can be
-                            applied to real observations
+                            <strong>No pre-interaction data needed</strong>  
                         </li>
                     </ul>
                 </section>
                 <!-- Control: the same selection seen in L_x -->
                 <section>
-                    <h6 class="r-fit-text">The same selection, seen in L<sub>x</sub></h6>
+                    
                     <img
                         src="media/results/phase_diagram/lx_con.png"
                         alt="E vs Lx contours with the same selected particles, symmetric about zero"
                         class="r-stretch"
                         style="background: #fff; padding: 8px; border-radius: 6px;" />
                     <p><small>The same particles are symmetric about L<sub>x</sub> = 0.
-                        The offset appears only in L<sub>z</sub> &mdash; the axis the orbit
+                        The offset appears only in L<sub>z</sub>  the axis the orbit
                         actually lives in.</small></p>
                 </section>
                 <!-- The selected wake, in 3D, against the LMC orbit -->
@@ -619,16 +753,15 @@
                 </section>
                 <!-- Robustness / null tests -->
                 <section>
-                    <h6>Is the selection finding anything real?</h6>
+                    
                     <ul style="font-size: 1.6rem">
                         <li class="fragment" data-fragment-index="1">Lower first-cut thresholds and higher second-cut
                             intercepts both <strong>sharpen</strong> the peak</li>
-                        <li class="fragment" data-fragment-index="2">Select too few particles and the structure disappears &mdash;
-                            the teardrop turns circular</li>
+                        <li class="fragment" data-fragment-index="2">Selecting too few particles makes  structure disappears </li>
                         <li class="fragment" data-fragment-index="3">The width of the second band makes no difference for particles
                             below the initial cut</li>
                         <li class="fragment" data-fragment-index="4"><strong>Random samples give saturated plots with no pattern
-                            at all</strong> &mdash; the structure is not an artefact of the method</li>
+                            at all</strong></li>
                     </ul>
                 </section>
                 <section>
