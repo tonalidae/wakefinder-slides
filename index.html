@@ -308,22 +308,34 @@
                     </section> -->
                     <section>
                     <h1>Data analysis</h1>
-                    <p class="r-stretch">
-                        <ul>
-                            <li class="fragment" data-fragment-index="1">N-body simulations run with <a href="https://wwwmpa.mpa-garching.mpg.de/gadget/">Gadget-3</a> (Garavito-Camargo et al. 2021), DM mass resolution 4&times;10<sup>4</sup> M<sub>&#9737;</sub></li>
-                            <li class="fragment" data-fragment-index="2">10<sup>8</sup> particles are needed to capture resonances; we analyse 10<sup>6</sup> of them, beyond 50 kpc from the halo centre</li>
-                            <li class="fragment" data-fragment-index="3"> 2 datasets &mdash; the same snapshot (t = 1.1 Gyr) from two independent runs:
-                                <ol>
-                                    <li class="fragment" data-fragment-index="4">Unperturbed halo, no LMC</li>
-                                    <li class="fragment" data-fragment-index="5">Halo perturbed by the LMC</li>
-                                </ol>
-                                </li>
-                            <li class="fragment" data-fragment-index="6">Not a before/after in time &mdash; the two runs are matched particle by particle through a shared id</li>
-                            <li class="fragment" data-fragment-index="7"> Data: 3D positions and velocities with their id</li>
-                            <li class="fragment" data-fragment-index="8">Histograms: position, and angular momentum computed from the particle velocities and their id.</li>
-                            <li class="fragment" data-fragment-index="9">Classification into low and high angular momentum regions</li>
-                        </ul>
-                    </p>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">N-body simulations run with <a href="https://wwwmpa.mpa-garching.mpg.de/gadget/">Gadget-3</a> (Garavito-Camargo et al. 2021)</li>
+                        <li class="fragment" data-fragment-index="2">DM particle mass resolution 4&times;10<sup>4</sup> M<sub>&#9737;</sub></li>
+                        <li class="fragment" data-fragment-index="3">10<sup>8</sup> particles are needed to capture resonances</li>
+                        <li class="fragment" data-fragment-index="4">We analyse 10<sup>6</sup> of them, beyond 50 kpc from the halo centre</li>
+                    </ul>
+                </section>
+                <!-- Data analysis, part 2: the two runs -->
+                <section>
+                    <h6>Two matched datasets</h6>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">The same snapshot (t = 1.1 Gyr) from two independent runs:
+                            <ol>
+                                <li class="fragment" data-fragment-index="2">Unperturbed halo, no LMC</li>
+                                <li class="fragment" data-fragment-index="3">Halo perturbed by the LMC</li>
+                            </ol>
+                        </li>
+                        <li class="fragment" data-fragment-index="4">Not a before/after in time &mdash; the two runs are matched particle by particle through a shared id</li>
+                    </ul>
+                </section>
+                <!-- Data analysis, part 3: derived quantities -->
+                <section>
+                    <h6>What we compute</h6>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">Data: 3D positions and velocities with their id</li>
+                        <li class="fragment" data-fragment-index="2">Histograms: position, and angular momentum computed from the particle velocities and their id</li>
+                        <li class="fragment" data-fragment-index="3">Classification into low and high angular momentum regions</li>
+                    </ul>
                 </section>
                 <!--4th verrtical slide pack-->
                 <section>
