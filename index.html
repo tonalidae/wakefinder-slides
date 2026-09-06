@@ -310,17 +310,18 @@
                     <h1>Data analysis</h1>
                     <p class="r-stretch">
                         <ul>
-                            <li class="fragment" data-fragment-index="1">N-body simulations. Code  <a href="https://wwwmpa.mpa-garching.mpg.de/gadget4/">GADGET-4</a></li>
-                            <li class="fragment" data-fragment-index="2">1 million particles.</li>
-                            <li class="fragment" data-fragment-index="3"> 2 datasets:
+                            <li class="fragment" data-fragment-index="1">N-body simulations run with <a href="https://wwwmpa.mpa-garching.mpg.de/gadget/">Gadget-3</a> (Garavito-Camargo et al. 2021), DM mass resolution 4&times;10<sup>4</sup> M<sub>&#9737;</sub></li>
+                            <li class="fragment" data-fragment-index="2">10<sup>8</sup> particles are needed to capture resonances; we analyse 10<sup>6</sup> of them, beyond 50 kpc from the halo centre</li>
+                            <li class="fragment" data-fragment-index="3"> 2 datasets &mdash; the same snapshot (t = 1.1 Gyr) from two independent runs:
                                 <ol>
-                                    <li class="fragment" data-fragment-index="4">Initial state, unperturbed halo</li>
-                                    <li class="fragment" data-fragment-index="5">After the interaction with the LMC</li>
+                                    <li class="fragment" data-fragment-index="4">Unperturbed halo, no LMC</li>
+                                    <li class="fragment" data-fragment-index="5">Halo perturbed by the LMC</li>
                                 </ol>
                                 </li>
-                            <li class="fragment" data-fragment-index="6"> Data: 3D positions and velocities with their id</li>
-                            <li class="fragment" data-fragment-index="7">Histograms: position, and angular momentum computed from the particle velocities and their id.</li>
-                            <li class="fragment" data-fragment-index="8">Classification into low and high angular momentum regions</li>
+                            <li class="fragment" data-fragment-index="6">Not a before/after in time &mdash; the two runs are matched particle by particle through a shared id</li>
+                            <li class="fragment" data-fragment-index="7"> Data: 3D positions and velocities with their id</li>
+                            <li class="fragment" data-fragment-index="8">Histograms: position, and angular momentum computed from the particle velocities and their id.</li>
+                            <li class="fragment" data-fragment-index="9">Classification into low and high angular momentum regions</li>
                         </ul>
                     </p>
                 </section>
@@ -332,6 +333,45 @@
                     \vec{L} = \vec{r} \times \vec{v} 
                     \end{aligned} 
                     \]
+                    </div>
+                </section>
+                <!-- Selection criteria: the WakeFinder algorithm -->
+                <section>
+                    <h6>How the wake is selected</h6>
+                    <div style="display: flex; flex-direction: row; align-items: center; gap: 2vw;">
+                        <div style="flex: 1.1; text-align: left; font-size: 1.5rem">
+                            <p class="fragment" data-fragment-index="1">
+                                <strong>Cut 1</strong> &mdash; in the <em>unperturbed</em> halo,
+                                keep L &lt; 10 000 kpc km/s
+                            </p>
+                            <p class="fragment" data-fragment-index="2">
+                                <strong>Cut 2</strong> &mdash; take those same ids in the
+                                <em>perturbed</em> halo and keep the band
+                                L<sub>1</sub> &lt; L &lt; L<sub>2</sub>, with r &lt; 125 kpc
+                            </p>
+                            <div class="fragment" data-fragment-index="2">
+                            \[\begin{aligned}
+                            L_1 &= 220\,(r-50) + 13\,000 \\
+                            L_2 &= 220\,(r-50) + 25\,000
+                            \end{aligned}\]
+                            </div>
+                            <p class="fragment" data-fragment-index="3">
+                                <small>The 125 kpc limit follows a spike in the distance
+                                distribution, followed by a drop in |L|.</small>
+                            </p>
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 1vh;">
+                            <img
+                                src="media/results/selection/unperturbed_low.png"
+                                alt="First cut: low angular momentum in the unperturbed halo"
+                                class="fragment" data-fragment-index="1"
+                                style="background: #fff; padding: 6px; border-radius: 6px; width: 62%; margin: 0 auto;" />
+                            <img
+                                src="media/results/selection/perturbed_line.png"
+                                alt="Second cut: angular momentum band in the perturbed halo"
+                                class="fragment" data-fragment-index="2"
+                                style="background: #fff; padding: 6px; border-radius: 6px; width: 62%; margin: 0 auto;" />
+                        </div>
                     </div>
                 </section>
                 <!-- Project results section -->
@@ -378,6 +418,49 @@
                 <section>
                     <h6>Low angular momentum particles grow with the LMC interaction and correspond spatially to the wake.</h6>
                     <img src="media/results/wakefinder/momentum_region.jpg" width="500px"/>
+                </section>
+                <!-- Energy vs angular momentum phase diagram -->
+                <section>
+                    <h6 class="r-fit-text">Energy&ndash;angular momentum phase diagram</h6>
+                    <img
+                        src="media/results/phase_diagram/lz_solo.png"
+                        alt="E vs Lz halo density contours"
+                        class="r-stretch"
+                        style="background: #fff; padding: 8px; border-radius: 6px;" />
+                    <p><small>Halo density contours in E vs L<sub>z</sub>.
+                        Green: L<sub>z</sub> = 0. Orange: the L = 10 000 kpc km/s threshold.</small></p>
+                </section>
+                <section>
+                    <h6 class="r-fit-text">Wake candidates in the phase diagram</h6>
+                    <img
+                        src="media/results/phase_diagram/lz_con.png"
+                        alt="E vs Lz contours with selected particles overplotted"
+                        class="r-stretch"
+                        style="background: #fff; padding: 8px; border-radius: 6px;" />
+                    <p><small>Red: particles selected by the angular momentum criteria,
+                        overplotted on the same contours.</small></p>
+                </section>
+                <section>
+                    <h6>What the phase diagram shows</h6>
+                    <ul style="font-size: 1.7rem">
+                        <li class="fragment" data-fragment-index="1">
+                            Selected particles pile up at <strong>positive L<sub>z</sub></strong>:
+                            they corotate with the LMC, whose orbit lies in the XY plane
+                        </li>
+                        <li class="fragment" data-fragment-index="2">
+                            Energy rises by about 10 000 &mdash; the halo expands,
+                            as seen in galaxy mergers
+                        </li>
+                        <li class="fragment" data-fragment-index="3">
+                            The sharp edge in the red distribution is our own
+                            L = 10 000 selection threshold
+                        </li>
+                        <li class="fragment" data-fragment-index="4">
+                            <strong>No pre-interaction data needed</strong> &mdash; unlike selection
+                            by angular momentum increments alone, so the method can be
+                            applied to real observations
+                        </li>
+                    </ul>
                 </section>
                 <section>
                     <h6>Conclusions</h6><pre class="python">
