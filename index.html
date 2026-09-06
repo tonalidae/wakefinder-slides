@@ -154,7 +154,16 @@
                             about models of the universe.
                             <!-- Talk about how the halo morphology changes depending on the model -->
                         </h6>
-                        <img src="media/DM-pie_website-w700.png" width="500"/>
+                        <div style="display: flex; flex-direction: row; align-items: center; gap: 2vw;">
+                            <img src="media/DM-pie_website-w700.png" style="max-height: 44vh;"/>
+                            <ul style="font-size: 1.5rem; text-align: left;">
+                                <li class="fragment" data-fragment-index="1">85% of the mass in the universe</li>
+                                <li class="fragment" data-fragment-index="2">Emits no electromagnetic radiation &mdash; known only through gravity</li>
+                                <li class="fragment" data-fragment-index="3">About 5&times; more abundant than visible matter</li>
+                                <li class="fragment" data-fragment-index="4">Evidence: rotation curves, gravitational lensing, CMB anisotropy</li>
+                                <li class="fragment" data-fragment-index="5">Without it, structure could not have formed at all</li>
+                            </ul>
+                        </div>
                         <aside class="notes">
                         Dark matter is about 85% of the mass in the universe. It emits no
                         electromagnetic radiation, so we know it only through gravity.
@@ -194,6 +203,12 @@
                                 class="r-stretch"
                                 />
                             <img src="media/artistic/LMC-sky.webp" class="r-stretch" width="200px"/>
+                            <p style="font-size: 1.4rem; margin-top: 0.5vh;">
+                                <span class="fragment" data-fragment-index="1">~1/10 of the Milky Way's mass</span> &middot;
+                                <span class="fragment" data-fragment-index="2">~50 kpc away, just past pericentre</span> &middot;
+                                <span class="fragment" data-fragment-index="3">moving at 327 km/s</span> &middot;
+                                <span class="fragment" data-fragment-index="4"><strong>on first infall</strong></span>
+                            </p>
                             <aside class="notes">
                             Numbers worth saying out loud: the LMC is the most massive satellite of
                             the Milky Way, roughly one tenth of the host mass. It is about 50 kpc
@@ -235,6 +250,11 @@
                             src="media/papers/possible-observations.png"
                             class="r-stretch"
                         />
+                        <p style="font-size: 1.4rem;">
+                            <span class="fragment" data-fragment-index="1">Gaia + WISE, low-metallicity stars in optical and infrared.</span>
+                            <span class="fragment" data-fragment-index="2">Several orbits would wash the wake out by destructive
+                            interference &mdash; seeing it argues for first infall.</span>
+                        </p>
                         <p>
                             <small>
                                 <em>
@@ -569,6 +589,18 @@
                         </li>
                     </ul>
                 </section>
+                <!-- Control: the same selection seen in L_x -->
+                <section>
+                    <h6 class="r-fit-text">The same selection, seen in L<sub>x</sub></h6>
+                    <img
+                        src="media/results/phase_diagram/lx_con.png"
+                        alt="E vs Lx contours with the same selected particles, symmetric about zero"
+                        class="r-stretch"
+                        style="background: #fff; padding: 8px; border-radius: 6px;" />
+                    <p><small>The same particles are symmetric about L<sub>x</sub> = 0.
+                        The offset appears only in L<sub>z</sub> &mdash; the axis the orbit
+                        actually lives in.</small></p>
+                </section>
                 <!-- The selected wake, in 3D, against the LMC orbit -->
                 <section>
                     <h6 class="r-fit-text">The selected wake follows the LMC orbit</h6>
@@ -582,16 +614,26 @@
                     <aside class="notes">
                     This is the whole argument in one picture: the selected particles trail
                     the LMC orbit, and their angular momentum rises along the trail.
-                    On robustness &mdash; lower first-cut thresholds and higher second-cut
-                    intercepts sharpen the peak; selecting too few particles loses the
-                    structure entirely and the teardrop turns circular; and running the same
-                    selection on random samples gives saturated plots with no pattern at all.
-                    That null test is the reason to believe the structure is real.
+                    The robustness checks are on the next slide.
                     </aside>
+                </section>
+                <!-- Robustness / null tests -->
+                <section>
+                    <h6>Is the selection finding anything real?</h6>
+                    <ul style="font-size: 1.6rem">
+                        <li class="fragment" data-fragment-index="1">Lower first-cut thresholds and higher second-cut
+                            intercepts both <strong>sharpen</strong> the peak</li>
+                        <li class="fragment" data-fragment-index="2">Select too few particles and the structure disappears &mdash;
+                            the teardrop turns circular</li>
+                        <li class="fragment" data-fragment-index="3">The width of the second band makes no difference for particles
+                            below the initial cut</li>
+                        <li class="fragment" data-fragment-index="4"><strong>Random samples give saturated plots with no pattern
+                            at all</strong> &mdash; the structure is not an artefact of the method</li>
+                    </ul>
                 </section>
                 <section>
                     <h6>Conclusions</h6><pre class="python">
-<code data-line-numbers="2-3|5-9|11-12">    
+<code data-line-numbers="2-3|5-9|11-12|14-16">    
     The Magellanic Cloud induces a dark matter wake 
     in the Milky Way halo due to dynamical friction.
 
@@ -603,6 +645,10 @@
 
     Stars associated with the dark matter wake can 
     be detected by their change in angular momentum.
+
+    Wake regions can be identified in the E-L phase
+    diagram with no pre-interaction data, so the method
+    can be applied to real observations.
 </code>
 </pre>
                 </section>
